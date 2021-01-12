@@ -109,7 +109,10 @@ const largestIncrement = (numbers) => {
  * afterX([1, 2, 3, 4, 5, 6, 7, 8, 9], 3) -> [4, 5, 6, 7, 8, 9]
  * afterX([11, 35, 52, 14, 56, 601, 777, 888, 999], 52) -> [14, 56, 601, 777, 888, 999]
  */
-const afterX = (numbers, x) => numbers.filter((number) => number > x)
+const afterX = (numbers, x) => {
+  const index = numbers.findIndex((i) => i === x);
+  return numbers.slice(index+1);
+}
 
 // console.log(afterX([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
 
